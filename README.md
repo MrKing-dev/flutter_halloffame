@@ -1,16 +1,19 @@
 # flutter_halloffame
 
-A new Flutter project.
+A hall of fame live interactive website for Hamburg Area School District.
 
-## Getting Started
+## Deploying
 
-This project is a starting point for a Flutter application.
+flutter clean
+flutter pub get
 
-A few resources to get you started if this is your first Flutter project:
+flutter build web --base-href /hasd-hall-of-fame/ --release
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+cd build/web
+git init
+git add .
+git commit -m "Deploy 2"
+git branch -M main
+git remote add origin https://github.com/MrKing-dev/hasd-hall-of-fame.git
+git push -u --force origin main
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
