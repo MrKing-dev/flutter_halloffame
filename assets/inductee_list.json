@@ -1,0 +1,102 @@
+[
+    {
+        "last_name": "Johnson",
+        "first_name": "Michael",
+        "induction_year": 2005,
+        "sports": ["football", "basketball"],
+        "grad_year": 1996,
+        "profile_photo": "./photos/johnsonm1.jpg",
+        "other_photos": ["./photos/johnsonm2.jpg", "./photos/johnsonm3.jpg"],
+        "description": "Michael was a star quarterback for the football team and point guard for the basketball team. He led the football team to two state championships and was named MVP in both finals. In basketball, he was a two-time All-State player and led his team to the state semi-finals."
+    },
+    {
+        "last_name": "Smith",
+        "first_name": "Samantha",
+        "induction_year": 2012,
+        "sports": ["volleyball", "track and field"],
+        "grad_year": 2008,
+        "profile_photo": "./photos/garcias1.jpg",
+        "other_photos": ["./photos/garcias2.jpg", "./photos/garcias3.jpg"],
+        "description": "Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles."
+    },
+    {
+        "last_name": "Martinez",
+        "first_name": "David",
+        "induction_year": 2010,
+        "sports": ["baseball", "cross country"],
+        "grad_year": 2007,
+        "profile_photo": "./photos/martinezd1.jpg",
+        "other_photos": ["./photos/martinezd2.jpg", "./photos/martinezd3.jpg"],
+        "description": "David was a standout pitcher for the baseball team, leading them to two state championships. He was named MVP in both finals. In cross country, he was a state champion and held the school record for the 5K."
+    },
+    {
+        "last_name": "Lee",
+        "first_name": "Emily",
+        "induction_year": 2018,
+        "sports": ["soccer", "swimming"],
+        "grad_year": 2014,
+        "profile_photo": "./photos/leee1.jpg",
+        "other_photos": ["./photos/leee2.jpg", "./photos/leee3.jpg"],
+        "description": "Emily was a standout player in both soccer and swimming. She led the soccer team to three consecutive state championships and was named MVP in two of those finals. In swimming, she set multiple school records and won several state titles."
+    },
+    {
+        "last_name": "Nguyen",
+        "first_name": "Daniel",
+        "induction_year": 2009,
+        "sports": ["wrestling", "golf"],
+        "grad_year": 2005,
+        "profile_photo": "./photos/nguyend1.jpg",
+        "other_photos": ["./photos/nguyend2.jpg", "./photos/nguyend3.jpg"],
+        "description": "Daniel was a standout wrestler and golfer. He won three state championships in wrestling and was named MVP in two of those finals. In golf, he was a state champion and held the school record for lowest round."
+    },
+    {
+        "last_name": "Kim",
+        "first_name": "Jessica",
+        "induction_year": 2016,
+        "sports": ["tennis", "softball"],
+        "grad_year": 2012,
+        "profile_photo": "./photos/kimj1.jpg",
+        "other_photos": ["./photos/kimj2.jpg", "./photos/kimj3.jpg"],
+        "description": "Jessica was a standout player in both tennis and softball. She won two state championships in tennis and was named MVP in both finals. In softball, she led her team to the state semi-finals and was named MVP of the tournament."
+    },
+    {
+        "last_name": "Brown",
+        "first_name": "Andrew",
+        "induction_year": 2014,
+        "sports": ["basketball", "football"],
+        "grad_year": 2010,
+        "profile_photo": "./photos/browna1.jpg",
+        "other_photos": ["./photos/browna2.jpg", "./photos/browna3.jpg"],
+        "description": "Andrew was a standout player in both basketball and football. He led the basketball team to two state championships and was named MVP in both finals. In football, he was a two-time All-State player and led his team to the state semi-finals."
+    },
+    {
+        "last_name": "Gonzalez",
+        "first_name": "Sophia",
+        "induction_year": 2015,
+        "sports": ["field hockey", "lacrosse"],
+        "grad_year": 2011,
+        "profile_photo": "./photos/gonzalezs1.jpg",
+        "other_photos": ["./photos/gonzalezs2.jpg", "./photos/gonzalezs3.jpg"],
+        "description": "Sophia was a dominant force in both field hockey and lacrosse. She led the field hockey team to three consecutive state championships and was named MVP in two of those finals. In lacrosse, she was a state champion and held the school record for most goals in a season."
+    },
+    {
+        "last_name": "Rodriguez",
+        "first_name": "Matthew",
+        "induction_year": 2013,
+        "sports": ["soccer", "track and field"],
+        "grad_year": 2009,
+        "profile_photo": "./photos/rodriguezm1.jpg",
+        "other_photos": ["./photos/rodriguezm2.jpg", "./photos/rodriguezm3.jpg"],
+        "description": "Matthew was a standout player in both soccer and track and field. He led the soccer team to three consecutive state championships and was named MVP in two of those finals. In track and field, he set multiple school records and won several state titles."
+    },
+    {
+        "last_name": "Hernandez",
+        "first_name": "Olivia",
+        "induction_year": 2017,
+        "sports": ["volleyball", "swimming"],
+        "grad_year": 2013,
+        "profile_photo": "./photos/hernandeze1.jpg",
+        "other_photos": ["./photos/hernandeze2.jpg", "./photos/hernandeze3.jpg"],
+        "description": "Olivia was a standout player in both volleyball and swimming. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In swimming, she set multiple school records and won several state titles."
+    }
+]
