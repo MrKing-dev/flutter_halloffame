@@ -2,8 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-var photo_displayed = 'profile_photo';
+var photo_displayed = '';
 
 void main() => runApp(MyApp());
 
@@ -35,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final jsonData = json.decode(jsonString);
     setState(() {
       inducteeList = List<Map<String, dynamic>>.from(jsonData);
+      inducteeList.sort((a, b) => a['last_name'].compareTo(b['last_name']));
     });
   }
 
@@ -45,8 +47,14 @@ class _HomeScreenState extends State<HomeScreen> {
         toolbarHeight: 100,
         backgroundColor: Colors.red,
         foregroundColor: Colors.white,
-        title: Text('Hamburg Area School District',
-            style: TextStyle(color: Colors.white, fontSize: 55)),
+        title: Text(
+          'Hamburg Area School District',
+          style: GoogleFonts.poppins(
+            color: Colors.white,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -60,57 +68,89 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Hall of Fame',
-                style: TextStyle(color: Colors.white, fontSize: 24),
+                'Athletics Hall of Fame',
+                style: GoogleFonts.poppins(
+                  color: Colors.white,
+                  fontSize: 75,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Expanded(
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
+                    crossAxisCount: 4,
                   ),
                   itemCount: inducteeList.length,
                   itemBuilder: (context, index) {
                     return Padding(
-                      padding: const EdgeInsets.all(100.0),
-                      child: InkWell(
-                        onTap: () {
-                          showModalBottomSheet<dynamic>(
-                            isScrollControlled: true,
-                            context: context,
-                            constraints: BoxConstraints(
-                              maxWidth: MediaQuery.of(context).size.width * 0.8,
-                            ),
-                            builder: (BuildContext context) {
-                              return CardDetail(inductee: inducteeList[index]);
-                            },
-                          );
-                        },
-                        child: Card(
-                          color: Colors.red[900],
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(
+                      padding: const EdgeInsets.all(50.0),
+                      child: Card(
+                        clipBehavior: Clip.hardEdge,
+                        color: Colors.red[900],
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              top: 0,
+                              left: 0,
+                              right: 0,
+                              child: Image.asset(
                                 inducteeList[index]['profile_photo'],
-                                width: 300,
-                                height: 300,
                                 fit: BoxFit.cover,
                               ),
-                              SizedBox(height: 10),
-                              Text(
-                                '${inducteeList[index]['first_name']} ${inducteeList[index]['last_name']}',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 35),
+                            ),
+                            Container(
+                                decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.transparent,
+                                  Colors.black87,
+                                ],
                               ),
-                              SizedBox(height: 5),
-                              Text(
-                                inducteeList[index]['sports'].join(', '),
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 20),
+                            )),
+                            Positioned(
+                              bottom: 5,
+                              left: 5,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    textAlign: TextAlign.left,
+                                    '${inducteeList[index]['first_name']} ${inducteeList[index]['last_name']}',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 35,
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    textAlign: TextAlign.left,
+                                    '${inducteeList[index]['sports'].join(', ')}',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 14),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            InkWell(
+                              onTap: () {
+                                showModalBottomSheet<dynamic>(
+                                  isScrollControlled: true,
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return CardDetail(
+                                        inductee: inducteeList[index]);
+                                  },
+                                  constraints: BoxConstraints(
+                                      minWidth:
+                                          MediaQuery.of(context).size.width *
+                                              0.8),
+                                );
+                              },
+                            ),
+                          ],
                         ),
                       ),
                     );
@@ -136,105 +176,109 @@ class CardDetail extends StatefulWidget {
 
 class _CardDetailState extends State<CardDetail> {
   @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  '${widget.inductee['first_name']} ${widget.inductee['last_name']}',
-                  style: TextStyle(fontSize: 24),
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: Icon(Icons.close),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Row(
-              children: [
-                Image.asset(
-                  widget.inductee[photo_displayed],
-                  width: 500,
-                  height: 700,
-                  fit: BoxFit.cover,
-                ),
-                SizedBox(width: 10),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Induction Year: ${widget.inductee['induction_year']}',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Divider(
-                        endIndent: 1000,
-                      ),
-                      Text(
-                        'Sports: ${widget.inductee['sports'].join(', ')}',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Divider(
-                        endIndent: 1000,
-                      ),
-                      Text(
-                        'Graduation Year: ${widget.inductee['grad_year']}',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Divider(
-                        endIndent: 1000,
-                      ),
-                      SizedBox(height: 50),
-                      Text(
-                        'Description',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                      SizedBox(height: 10),
-                      Text(widget.inductee['description'],
-                          style: TextStyle(fontSize: 18)),
-                      SizedBox(height: 50),
-                      Text(
-                        'Other Photos',
-                        style: TextStyle(fontSize: 35),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          for (var photo in widget.inductee['other_photos'])
-                            GestureDetector(
-                              onTap: () {
-                                print(photo);
+  var photo_gallery = false;
 
-                                setState(() {
-                                  //photo_displayed = photo;
-                                });
-                              },
-                              child: Image.asset(
-                                photo,
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
-                              ),
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.close),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          Row(
+            children: [
+              Image.asset(
+                photo_gallery
+                    ? photo_displayed
+                    : widget.inductee['profile_photo'],
+                width: 500,
+                height: 700,
+                fit: BoxFit.cover,
+              ),
+              SizedBox(width: 50),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '${widget.inductee['first_name']} ${widget.inductee['last_name']}',
+                      style: TextStyle(fontSize: 50),
+                    ),
+                    Text(
+                      'Induction Year: ${widget.inductee['induction_year']}',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Divider(
+                      endIndent: 1000,
+                    ),
+                    Text(
+                      'Sports: ${widget.inductee['sports'].join(', ')}',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Divider(
+                      endIndent: 1000,
+                    ),
+                    Text(
+                      'Graduation Year: ${widget.inductee['grad_year']}',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Divider(
+                      endIndent: 1000,
+                    ),
+                    SizedBox(height: 50),
+                    Text(
+                      'Description',
+                      style: TextStyle(fontSize: 35),
+                    ),
+                    SizedBox(height: 10),
+                    Text(widget.inductee['description'],
+                        style: TextStyle(fontSize: 18)),
+                    SizedBox(height: 50),
+                    Text(
+                      'Other Photos',
+                      style: TextStyle(fontSize: 35),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        for (var photo in widget.inductee['other_photos'])
+                          GestureDetector(
+                            onTap: () {
+                              print(photo);
+
+                              setState(() {
+                                photo_gallery = true;
+                                photo_displayed = photo;
+                              });
+                            },
+                            child: Image.asset(
+                              photo,
+                              width: 100,
+                              height: 100,
+                              fit: BoxFit.cover,
                             ),
-                        ],
-                      ),
-                    ],
-                  ),
+                          ),
+                      ],
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ],
-        ),
+              ),
+              SizedBox(width: 50),
+            ],
+          ),
+        ],
       ),
     );
   }
