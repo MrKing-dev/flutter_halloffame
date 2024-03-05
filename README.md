@@ -12,7 +12,7 @@ flutter build web --base-href /hasd-hall-of-fame/ --release
 cd build/web
 git init
 git add .
-git commit -m "Deploy 3"
+git commit -m "Deploy 5"
 git branch -M main
 git remote add origin https://github.com/MrKing-dev/hasd-hall-of-fame.git
 git push -u --force origin main

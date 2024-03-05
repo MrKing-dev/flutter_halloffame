@@ -3,7 +3,7 @@
         "last_name": "Johnson",
         "first_name": "Michael",
         "induction_year": 2005,
-        "sports": ["Football", "Basketball"],
+        "sports": ["Football", "Basketball", "Baseball", "Track and Field", "Soccer" ],
         "grad_year": 1996,
         "profile_photo": "./photos/johnsonm1.jpg",
         "other_photos": ["./photos/johnsonm2.jpg", "./photos/johnsonm3.jpg"],

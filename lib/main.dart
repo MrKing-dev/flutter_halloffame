@@ -55,6 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
             fontWeight: FontWeight.bold,
           ),
         ),
+        actions: [],
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -78,80 +79,86 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4,
+                    crossAxisCount: 5,
                   ),
                   itemCount: inducteeList.length,
                   itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(50.0),
-                      child: Card(
-                        clipBehavior: Clip.hardEdge,
-                        color: Colors.red[900],
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              top: 0,
-                              left: 0,
-                              right: 0,
-                              child: Image.asset(
-                                inducteeList[index]['profile_photo'],
-                                fit: BoxFit.cover,
-                              ),
+                    return Card(
+                      clipBehavior: Clip.hardEdge,
+                      color: Colors.red[900],
+                      margin: EdgeInsets.all(40),
+                      elevation: 5,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            child: Image.asset(
+                              inducteeList[index]['profile_photo'],
+                              fit: BoxFit.cover,
                             ),
-                            Container(
-                                decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.transparent,
-                                  Colors.black87,
-                                ],
-                              ),
-                            )),
-                            Positioned(
-                              bottom: 5,
-                              left: 5,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
+                          ),
+                          Container(
+                              decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.transparent,
+                                Colors.black87,
+                              ],
+                            ),
+                          )),
+                          Positioned(
+                            bottom: 5,
+                            left: 5,
+                            right: 5,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: Text(
                                     textAlign: TextAlign.left,
                                     '${inducteeList[index]['first_name']} ${inducteeList[index]['last_name']}',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 35,
+                                      fontSize: 50,
                                     ),
                                   ),
-                                  SizedBox(height: 5),
-                                  Text(
+                                ),
+                                FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: Text(
                                     textAlign: TextAlign.left,
                                     '${inducteeList[index]['sports'].join(', ')}',
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 14),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                            InkWell(
-                              onTap: () {
-                                showModalBottomSheet<dynamic>(
-                                  isScrollControlled: true,
-                                  context: context,
-                                  builder: (BuildContext context) {
-                                    return CardDetail(
-                                        inductee: inducteeList[index]);
-                                  },
-                                  constraints: BoxConstraints(
-                                      minWidth:
-                                          MediaQuery.of(context).size.width *
-                                              0.8),
-                                );
-                              },
-                            ),
-                          ],
-                        ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              showModalBottomSheet<dynamic>(
+                                isScrollControlled: true,
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return CardDetail(
+                                      inductee: inducteeList[index]);
+                                },
+                                constraints: BoxConstraints(
+                                    minWidth:
+                                        MediaQuery.of(context).size.width *
+                                            0.8),
+                              );
+                            },
+                          ),
+                        ],
                       ),
                     );
                   },
@@ -195,18 +202,20 @@ class _CardDetailState extends State<CardDetail> {
               ),
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset(
-                photo_gallery
-                    ? photo_displayed
-                    : widget.inductee['profile_photo'],
-                width: 500,
-                height: 700,
-                fit: BoxFit.cover,
+              Expanded(
+                child: Image.asset(
+                  photo_gallery
+                      ? photo_displayed
+                      : widget.inductee['profile_photo'],
+                  fit: BoxFit.contain,
+                ),
               ),
-              SizedBox(width: 50),
+              SizedBox(width: 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -214,41 +223,38 @@ class _CardDetailState extends State<CardDetail> {
                   children: [
                     Text(
                       '${widget.inductee['first_name']} ${widget.inductee['last_name']}',
-                      style: TextStyle(fontSize: 50),
+                      style:
+                          TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       'Induction Year: ${widget.inductee['induction_year']}',
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 14),
                     ),
-                    Divider(
-                      endIndent: 1000,
-                    ),
+                    Divider(),
                     Text(
                       'Sports: ${widget.inductee['sports'].join(', ')}',
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 14),
                     ),
-                    Divider(
-                      endIndent: 1000,
-                    ),
+                    Divider(),
                     Text(
                       'Graduation Year: ${widget.inductee['grad_year']}',
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 14),
                     ),
-                    Divider(
-                      endIndent: 1000,
-                    ),
-                    SizedBox(height: 50),
+                    Divider(),
+                    SizedBox(height: 10),
                     Text(
                       'Description',
-                      style: TextStyle(fontSize: 35),
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 10),
                     Text(widget.inductee['description'],
-                        style: TextStyle(fontSize: 18)),
-                    SizedBox(height: 50),
+                        style: TextStyle(fontSize: 16)),
+                    SizedBox(height: 10),
                     Text(
                       'Other Photos',
-                      style: TextStyle(fontSize: 35),
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -256,8 +262,6 @@ class _CardDetailState extends State<CardDetail> {
                         for (var photo in widget.inductee['other_photos'])
                           GestureDetector(
                             onTap: () {
-                              print(photo);
-
                               setState(() {
                                 photo_gallery = true;
                                 photo_displayed = photo;
@@ -275,7 +279,7 @@ class _CardDetailState extends State<CardDetail> {
                   ],
                 ),
               ),
-              SizedBox(width: 50),
+              SizedBox(width: 5),
             ],
           ),
         ],
