@@ -31,6 +31,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   late List<Map<String, dynamic>> inducteeList;
   late List<Map<String, dynamic>> filteredInducteeList;
+  final _letterKey = GlobalKey<FormState>();
+  final _sportKey = GlobalKey<FormState>();
 
   final TextEditingController letterController = TextEditingController();
   final TextEditingController sportController = TextEditingController();
@@ -45,6 +47,12 @@ class _HomeScreenState extends State<HomeScreen> {
     final jsonString = await rootBundle.loadString('assets/inductee_list.json');
     final jsonData = json.decode(jsonString);
     setState(() {
+      _letterKey.currentState?.reset();
+      _sportKey.currentState?.reset();
+      letterController.clear();
+      sportController.clear();
+      selectedLetter = '';
+      selectedSport = '';
       inducteeList = List<Map<String, dynamic>>.from(jsonData);
       inducteeList.sort((a, b) => a['last_name'].compareTo(b['last_name']));
       filteredInducteeList = List<Map<String, dynamic>>.from(inducteeList);
@@ -117,8 +125,9 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(width: 20),
           DropdownMenu(
             controller: letterController,
+            key: _letterKey,
             label: Text('Filter by Last Name'),
-            initialSelection: "A",
+            //initialSelection: "A",
             width: 200,
             inputDecorationTheme: InputDecorationTheme(
               constraints: BoxConstraints.tight(
@@ -171,8 +180,9 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(width: 20),
           DropdownMenu(
             controller: sportController,
+            key: _sportKey,
             label: Text('Filter by Sport'),
-            initialSelection: "Football",
+            //initialSelection: "Football",
             inputDecorationTheme: InputDecorationTheme(
               constraints: BoxConstraints.tight(
                 Size.fromHeight(35),
