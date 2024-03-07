@@ -1,102 +1,114 @@
 [
     {
-        "last_name": "Johnson",
-        "first_name": "Michael",
-        "induction_year": 2005,
-        "sports": ["Football", "Basketball", "Baseball", "Track and Field", "Soccer" ],
-        "grad_year": 1996,
-        "profile_photo": "./photos/johnsonm1.jpg",
-        "other_photos": ["./photos/johnsonm2.jpg", "./photos/johnsonm3.jpg"],
-        "description": "Michael was a star quarterback for the football team and point guard for the basketball team. He led the football team to two state championships and was named MVP in both finals. In basketball, he was a two-time All-State player and led his team to the state semi-finals."
+        "last_name": "Moody",
+        "first_name": "Susan",
+        "induction_year": 2023,
+        "sports": ["Field Hockey", "Basketball", "Softball", "Tennis"],
+        "grad_year": 1976,
+        "profile_photo": "./photos/moodys1.jpg",
+        "other_photos": ["./photos/moodys2.jpg", "./photos/moodys3.jpg"],
+        "description": "Susan (Leibensperger) Moody was an outstanding athlete during her time at Hamburg Area High School. She excelled in multiple sports, earning numerous accolades. In field hockey, she received 1st Team All Division honors in 1974 and 1975. In basketball, she was named Most Valuable Player in 1976 and earned 2nd Team All Division honors the same year. In softball, Susan was part of the BCIAA Champions team in 1975 and received 1st Team All Division honors every year from 1973 to 1976. Additionally, Susan showcased her talent in tennis during her time at Green Mountain College from 1976 to 1979, where she was a three-year starter."
     },
     {
-        "last_name": "Smith",
-        "first_name": "Samantha",
-        "induction_year": 2012,
-        "sports": ["Volleyball", "Track and Field"],
-        "grad_year": 2008,
-        "profile_photo": "./photos/garcias1.jpg",
-        "other_photos": ["./photos/garcias2.jpg", "./photos/garcias3.jpg"],
-        "description": "Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles. Samantha was a dominant force in both volleyball and track and field. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In track and field, she held multiple school records and won several state titles."
+        "last_name": "Shollenberger",
+        "first_name": "Bob",
+        "induction_year": 2023,
+        "sports": ["Softball"],
+        "grad_year": null,
+        "profile_photo": "./photos/shollenbergerb1.jpg",
+        "other_photos": ["./photos/shollenbergerb2.jpg", "./photos/shollenbergerb3.jpg"],
+        "description": "Bob Shollenberger is a renowned coach known for his remarkable tenure as the HAHS Softball Coach from 1990 to 2001. Under his guidance, the team achieved great success with a record of 163-93. Notably, he became the first coach to win 20 games in a season in 1997. His coaching prowess led HAHS to multiple BCIAA Division Championships in '95, '96, '97, '98, and '00. Additionally, the team was a BCIAA Runner-Up in 1997 and a District 3 Runner-Up in 2000, qualifying for the PIAA in both of those years."
+    },
+
+    {
+        "last_name": "Schappel",
+        "first_name": "Jen",
+        "induction_year": 2023,
+        "sports": ["Field Hockey", "Track"],
+        "grad_year": 2000,
+        "profile_photo": "./photos/schappelj1.jpg",
+        "other_photos": ["./photos/schappelj2.jpg", "./photos/schappelj3.jpg"],
+        "description": "Jen (Denault) Schappel had an illustrious athletic career, starting at Hamburg Area High School and continuing to great success at Lock Haven University. At HAHS, she was a standout in both field hockey and track. In field hockey, Jen received numerous accolades including being named 1st-Team All Berks and 1st-Team All State in 1999. She also contributed to the team's impressive record of 73-22-4. In track, Jen excelled and set a school record in the 400m. At Lock Haven University, Jen's legacy continued as she became a NCAA National Champion in 2000. She was also a PSAC Champion in 2000 and 2001, earning PSAC Rookie of The Year in 2000. Throughout her collegiate career, she was a 4-time All American and received numerous other honors including NCAA & PSAC Player of The Year in 2003. Her outstanding performance led her team to an impressive record of 76-13. Jen's contributions to sports were recognized beyond her playing career as she also coached HAHS Field Hockey, achieving an 8-year record of 113-73-6 and earning HAHS Coach of The Year honors in '07-'08 and '11-‘12. Despite finishing as BCIAA Runner-Up in '07 and '12, Jen's impact on the field was undeniable."
     },
     {
-        "last_name": "Martinez",
-        "first_name": "David",
-        "induction_year": 2010,
-        "sports": ["Baseball", "Cross Country"],
+        "last_name": "Fayewicz",
+        "first_name": "Shelley",
+        "induction_year": 2021,
+        "sports": ["Field Hockey", "Soccer", "Basketball"],
+        "grad_year": 2002,
+        "profile_photo": "./photos/fayewiczs1.jpg",
+        "other_photos": ["./photos/fayewiczs2.jpg", "./photos/fayewiczs3.jpg"],
+        "description": "Shelley (Reppert) Fayewicz left an indelible mark on Hamburg Area High School athletics during her tenure. Named HAHS Athlete of the Year, Scholar-Athlete of the Year, and recipient of the Sportsmanship Award in 2002, Shelley demonstrated excellence both on and off the field. In field hockey, she served as captain in 2001 and received All-State and All County honors in 2000 and 2001, respectively, while also achieving NFHCA Academic recognition in 2001. Additionally, Shelley displayed leadership in soccer as captain in 2002. Her athleticism extended to basketball where she earned two letters. Continuing her athletic journey at Susquehanna University, Shelley excelled in field hockey, earning four letters, captaining the team in 2005, and receiving numerous accolades including Team MVP and 1st Team MAC honors in 2004 and 2005. Her academic and athletic achievements culminated in being named Connie Harnum SU Athlete of the Year in 2006."
+    },
+    {
+        "last_name": "Werner",
+        "first_name": "Larry",
+        "induction_year": 2021,
+        "sports": ["Basketball", "Baseball", "Tennis", "Track", "Baseball"],
+        "grad_year": null,
+        "profile_photo": "./photos/wernerl1.jpg",
+        "other_photos": ["./photos/wernerl2.jpg", "./photos/wernerl3.jpg"],
+        "description": "Larry Werner is a coaching legend whose influence spans across multiple sports and decades at Hamburg Area High School. Serving as the Boys Basketball coach from 1963 to 1975, he led the team to two Division Championships and was named Reading Eagle Coach of the Year three times. From 1977 to 1991, Larry coached Girls Basketball, earning three GOTA Coach of the Year titles. His coaching expertise extended to baseball, leading the team to a County Championship in 1969. Additionally, he coached Boys Tennis from 1973 to 1977 and Girls Track from 1978 to 1979. Larry's dedication to sports continued as he coached Junior High Baseball from 1981 to 1993. Outside of coaching, he officiated Berks County Soccer for 35 years and served as a HAHS Physical Education Teacher from 1963 to 1993."
+    },
+    {
+        "last_name": "Caretti",
+        "first_name": "Erin",
+        "induction_year": 2021,
+        "sports": ["Football", "Basketball"],
+        "grad_year": 1991,
+        "profile_photo": "./photos/carettie1.jpg",
+        "other_photos": ["./photos/carettie2.jpg", "./photos/carettie3.jpg"],
+        "description": "Erin Caretti is a distinguished athlete recognized for his achievements at Hamburg Area High School and beyond. Named HAHS Athlete of the Year in 1991, Erin made significant contributions to football, earning All County and All IC honors in 1990 and 1991, respectively. His prowess on the field was evident as he led the team in tackles in 1990 and was nominated for the Big 33 in 1990. In basketball, Erin also showcased his talent, earning two letters. Continuing his athletic journey at Colgate University, Erin excelled in football, receiving four letters and being awarded the 'Wearin' The Red Award' in 1994. He left his mark on the field, ranking 13th on the single-season sack list at graduation. Erin's coaching career took him to various institutions including Hamburg Area Youth, Yeunguam University in Korea, Wyoming Seminary, Perkiomen Prep, and Mercersburg Academy, where he continued to inspire and mentor future athletes."
+    },
+    {
+        "last_name": "Sanko",
+        "first_name": "Nick",
+        "induction_year": 2022,
+        "sports": ["Wrestling", "Football"],
         "grad_year": 2007,
-        "profile_photo": "./photos/martinezd1.jpg",
-        "other_photos": ["./photos/martinezd2.jpg", "./photos/martinezd3.jpg"],
-        "description": "David was a standout pitcher for the baseball team, leading them to two state championships. He was named MVP in both finals. In cross country, he was a state champion and held the school record for the 5K."
+        "profile_photo": "./photos/sankon1.jpg",
+        "other_photos": ["./photos/sankon2.jpg", "./photos/sankon3.jpg"],
+        "description": "Nick Sanko was a dominant force in both wrestling and football throughout his high school and college career. At HAHS, he achieved remarkable success in wrestling, earning 4 varsity letters, serving as captain in 2007, and accumulating 111 wins. Nick's accolades include being named All Berks and County Champ in both 2006 and 2007, as well as District and Regional Champ in 2006 and 2007. He also qualified for the PIAA in both 2006 and 2007 and received PWCA All-Academic honors in 2006 and 2007. In football, Nick earned 4 varsity letters and served as captain in 2006. His impressive performance on the field earned him recognition for his receptions, ranking in the top-10 both in single-game and career receptions. Continuing his athletic journey at Ithaca College, Nick excelled in wrestling, earning 4 letters and achieving NCAA All-American status in 2012."
     },
     {
-        "last_name": "Lee",
-        "first_name": "Emily",
-        "induction_year": 2018,
-        "sports": ["Soccer", "Swimming"],
-        "grad_year": 2014,
-        "profile_photo": "./photos/leee1.jpg",
-        "other_photos": ["./photos/leee2.jpg", "./photos/leee3.jpg"],
-        "description": "Emily was a standout player in both soccer and swimming. She led the soccer team to three consecutive state championships and was named MVP in two of those finals. In swimming, she set multiple school records and won several state titles."
+        "last_name": "Lindenmuth",
+        "first_name": "Terry",
+        "induction_year": 2022,
+        "sports": ["Soccer", "Wrestling", "Track", "Soccer", "Lacrosse"],
+        "grad_year": 1969,
+        "profile_photo": "./photos/lindenmutht1.jpg",
+        "other_photos": ["./photos/lindenmutht2.jpg", "./photos/lindenmutht3.jpg"],
+        "description": "Terry Lindenmuth's legacy is marked by his exceptional athleticism across multiple sports and his dedication to coaching. At HAHS, Terry earned recognition as Male Athlete of The Year for the 1968-69 season. In soccer, he achieved 4 varsity letters and was named All Berks in 1967 and 1968. He was part of Division Championship teams in 1968 and 1969. In wrestling, Terry excelled with 4 varsity letters and earned All Berks honors in 1968 and 1969, in addition to being County Champ both years. His versatility extended to track, where he earned 4 varsity letters. Continuing his athletic career at Kutztown University, Terry competed in soccer for four years, serving as a two-time captain, and also participated in wrestling and lacrosse. Terry's commitment to sports extended beyond his playing days as he served as a coach for wrestling and soccer at Kutztown Area SD and contributed to the BCIAA Board of Control."
     },
     {
-        "last_name": "Nguyen",
-        "first_name": "Daniel",
-        "induction_year": 2009,
-        "sports": ["Wrestling", "Golf"],
-        "grad_year": 2005,
-        "profile_photo": "./photos/nguyend1.jpg",
-        "other_photos": ["./photos/nguyend2.jpg", "./photos/nguyend3.jpg"],
-        "description": "Daniel was a standout wrestler and golfer. He won three state championships in wrestling and was named MVP in two of those finals. In golf, he was a state champion and held the school record for lowest round."
+        "last_name": "Hoffman",
+        "first_name": "Randy",
+        "induction_year": 2022,
+        "sports": ["Bowling"],
+        "grad_year": null,
+        "profile_photo": "./photos/hoffmanr1.jpg",
+        "other_photos": ["./photos/hoffmanr2.jpg", "./photos/hoffmanr3.jpg"],
+        "description": "Randy Hoffman is a distinguished coach known for his leadership in the realm of bowling. With an impressive coaching career spanning 18 years at HAHS, Randy's impact was profound. He served as the Boys & Girls Bowling Head Coach, leading the boys' team to victory as the 2000 PA State Bowling Champions and the 2000 BCIAA Champions. His coaching prowess led to numerous Division Championships and remarkable achievements, including a runner-up finish in the 2007 BCIAA tournament. Randy's dedication to coaching and his ability to inspire his teams to success mark him as a standout figure in the world of high school bowling."
     },
     {
-        "last_name": "Kim",
-        "first_name": "Jessica",
-        "induction_year": 2016,
-        "sports": ["Tennis", "Softball"],
-        "grad_year": 2012,
-        "profile_photo": "./photos/kimj1.jpg",
-        "other_photos": ["./photos/kimj2.jpg", "./photos/kimj3.jpg"],
-        "description": "Jessica was a standout player in both tennis and softball. She won two state championships in tennis and was named MVP in both finals. In softball, she led her team to the state semi-finals and was named MVP of the tournament."
+        "last_name": "Palubinski",
+        "first_name": "Tom",
+        "induction_year": 2022,
+        "sports": ["Football", "Baseball"],
+        "grad_year": 1974,
+        "profile_photo": "./photos/palubinskit1.jpg",
+        "other_photos": ["./photos/palubinskit2.jpg", "./photos/palubinskit3.jpg"],
+        "description": "Tom Palubinski is remembered for his remarkable achievements in football and baseball during his time at HAHS and beyond. In football, Tom earned 3 letters and was named 1st-Team All Berks and 1st-Team Inter-County League in 1973. He left his mark on the school's record books with a memorable performance, setting the record for most touchdowns in a game with 3 against Freeland in 1973. In baseball, Tom excelled, earning 4 letters and receiving 1st-Team All Berks honors in 1974. Continuing his athletic journey at East Stroudsburg University, Tom played football for four years and was inducted into the Hall of Fame. He led the team in receptions and yards from 1975 to 1977, earning PSAC 1st Team and ECAC 1st Team honors in 1975 and 1976. His achievements extended to the team's success as PSAC Champions in 1975 and 1976. Tom's athletic accomplishments were matched by his academic excellence, earning recognition as a Lehigh Valley Scholar-Athlete."
     },
     {
-        "last_name": "Brown",
-        "first_name": "Andrew",
-        "induction_year": 2014,
-        "sports": ["Basketball", "Football"],
-        "grad_year": 2010,
-        "profile_photo": "./photos/browna1.jpg",
-        "other_photos": ["./photos/browna2.jpg", "./photos/browna3.jpg"],
-        "description": "Andrew was a standout player in both basketball and football. He led the basketball team to two state championships and was named MVP in both finals. In football, he was a two-time All-State player and led his team to the state semi-finals."
-    },
-    {
-        "last_name": "Gonzalez",
-        "first_name": "Sophia",
-        "induction_year": 2015,
-        "sports": ["Field Hockey", "Lacrosse"],
-        "grad_year": 2011,
-        "profile_photo": "./photos/gonzalezs1.jpg",
-        "other_photos": ["./photos/gonzalezs2.jpg", "./photos/gonzalezs3.jpg"],
-        "description": "Sophia was a dominant force in both field hockey and lacrosse. She led the field hockey team to three consecutive state championships and was named MVP in two of those finals. In lacrosse, she was a state champion and held the school record for most goals in a season."
-    },
-    {
-        "last_name": "Rodriguez",
-        "first_name": "Matthew",
-        "induction_year": 2013,
-        "sports": ["Soccer", "Track and Field"],
-        "grad_year": 2009,
-        "profile_photo": "./photos/rodriguezm1.jpg",
-        "other_photos": ["./photos/rodriguezm2.jpg", "./photos/rodriguezm3.jpg"],
-        "description": "Matthew was a standout player in both soccer and track and field. He led the soccer team to three consecutive state championships and was named MVP in two of those finals. In track and field, he set multiple school records and won several state titles."
-    },
-    {
-        "last_name": "Hernandez",
-        "first_name": "Olivia",
-        "induction_year": 2017,
-        "sports": ["Volleyball", "Swimming"],
-        "grad_year": 2013,
-        "profile_photo": "./photos/hernandeze1.jpg",
-        "other_photos": ["./photos/hernandeze2.jpg", "./photos/hernandeze3.jpg"],
-        "description": "Olivia was a standout player in both volleyball and swimming. She led the volleyball team to three consecutive state championships and was named MVP in two of those finals. In swimming, she set multiple school records and won several state titles."
+        "last_name": "Gerner",
+        "first_name": "Joe",
+        "induction_year": 2022,
+        "sports": ["Soccer", "Basketball", "Baseball"],
+        "grad_year": 1964,
+        "profile_photo": "./photos/gernerj1.jpg",
+        "other_photos": ["./photos/gernerj2.jpg", "./photos/gernerj3.jpg"],
+        "description": "Joe Gerner is celebrated as an outstanding athlete and leader during his time at Hamburg Area High School. Named the Hamburg Area Outstanding Male Athlete in 1964, Joe left an indelible mark on multiple sports. In soccer, he served as captain and earned 4 letters, receiving 1st-Team All Berks honors in 1963. In basketball, Joe's leadership was evident as he captained the team and earned 4 letters. He received 2nd-Team All Berks honors in 1963-64 and contributed to Division Championship teams in 1962 and 1964. Joe's athleticism extended to baseball, where he earned 4 letters and was part of the 1963 American Legion State Championship team, showcasing his versatility and skill across different disciplines."
     }
+
 ]
